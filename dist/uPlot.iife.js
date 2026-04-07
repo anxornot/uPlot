@@ -278,8 +278,19 @@ var uPlot = (function () {
 		let _softMax = _max <= softMax && (softMaxMode == 1 || softMaxMode == 3 && _newMax >= softMax || softMaxMode == 2 && _newMax <= softMax) ? softMax : -inf;
 		let maxLim   = min(hardMax, _newMax > _softMax && _max <= _softMax ? _softMax : max(_softMax, _newMax));
 
-		if (minLim == maxLim && minLim == 0)
-			maxLim = 100;
+		// handle case when delta was small enough to cause fixFloat to have rounded off 6 decimals and result in min === max
+		if (minLim == maxLim) {
+			if (minLim == 0)
+				maxLim = 100;
+			else if (minLim < 0) {
+				minLim *= 2;
+				maxLim = 0;
+			}
+			else {
+				minLim = 0;
+				maxLim *= 2;
+			}
+		}
 
 		return [minLim, maxLim];
 	}
