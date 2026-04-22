@@ -4616,7 +4616,7 @@ function uPlot(opts, data, then) {
 
 		let _pxAlign = s.pxAlign == 1 && offset > 0;
 
-		_pxAlign && ctx.translate(offset, offset);
+		_pxAlign && offset != 0 && ctx.translate(offset, offset);
 
 		if (!_points) {
 			let lft = plotLft - width / 2,
@@ -4634,7 +4634,7 @@ function uPlot(opts, data, then) {
 		else
 			fillStroke(si, strokeStyle, width, s.dash, s.cap, fillStyle, stroke, fill, flags, boundsClip, gapsClip);
 
-		_pxAlign && ctx.translate(-offset, -offset);
+		_pxAlign && offset != 0 && ctx.translate(-offset, -offset);
 	}
 
 	function fillStroke(si, strokeStyle, lineWidth, lineDash, lineCap, fillStyle, strokePath, fillPath, flags, boundsClip, gapsClip) {
@@ -4759,7 +4759,7 @@ function uPlot(opts, data, then) {
 	function drawOrthoLines(offs, filts, ori, side, pos0, len, width, stroke, dash, cap) {
 		let offset = (width % 2) / 2;
 
-		pxAlign == 1 && ctx.translate(offset, offset);
+		pxAlign == 1 && offset != 0 && ctx.translate(offset, offset);
 
 		setCtxStyle(stroke, width, dash, cap, stroke);
 
@@ -4790,7 +4790,7 @@ function uPlot(opts, data, then) {
 
 		ctx.stroke();
 
-		pxAlign == 1 && ctx.translate(-offset, -offset);
+		pxAlign == 1 && offset != 0 && ctx.translate(-offset, -offset);
 	}
 
 	function axesCalc(cycleNum) {
