@@ -1,7 +1,7 @@
 import {
 	FEAT_TIME,
-} from './feats';
-import { abs, floor } from './utils';
+} from './feats.js';
+import { abs, floor } from './utils.js';
 
 const months = [
 	"January",

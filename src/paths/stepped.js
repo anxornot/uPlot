@@ -1,5 +1,5 @@
-import { ifNull, nonNullIdxs } from '../utils';
-import { orient, clipGaps, lineToH, lineToV, clipBandLine, BAND_CLIP_FILL, bandFillClipDirs, findGaps } from './utils';
+import { ifNull, nonNullIdxs } from '../utils.js';
+import { orient, clipGaps, lineToH, lineToV, clipBandLine, BAND_CLIP_FILL, bandFillClipDirs, findGaps } from './utils.js';
 
 // BUG: align: -1 behaves like align: 1 when scale.dir: -1
 export function stepped(opts) {

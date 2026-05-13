@@ -1,6 +1,6 @@
 import {
 	FEAT_TIME,
-} from './feats';
+} from './feats.js';
 
 import {
 	assign,
@@ -25,21 +25,21 @@ import {
 	noop,
 	ceil,
 	closestIdx,
-} from './utils';
+} from './utils.js';
 
 import {
 	hexBlack,
 	WIDTH,
 	HEIGHT,
 	LEGEND_DISP,
-} from './strings';
+} from './strings.js';
 
 import {
 	placeDiv,
 	setStylePx,
-} from './dom';
+} from './dom.js';
 
-import { DateZoned, fmtDate, floorSOP, PERIOD_DAY, PERIOD_MONTH, PERIOD_YEAR } from './fmtDate';
+import { DateZoned, fmtDate, floorSOP, PERIOD_DAY, PERIOD_MONTH, PERIOD_YEAR } from './fmtDate.js';
 
 //export const series = [];
 

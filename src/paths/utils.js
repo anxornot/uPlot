@@ -1,4 +1,4 @@
-import { round, incrRound, retArg0, min, EMPTY_ARR, ifNull } from "../utils";
+import { round, incrRound, retArg0, min, EMPTY_ARR, ifNull } from "../utils.js";
 
 export const BAND_CLIP_FILL   = 1 << 0;
 export const BAND_CLIP_STROKE = 1 << 1;

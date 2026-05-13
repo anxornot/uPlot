@@ -1,11 +1,11 @@
 import {
 	OFF,
-} from './domClasses';
+} from './domClasses.js';
 
 import {
 	change,
 	dppxchange,
-} from './strings';
+} from './strings.js';
 
 export const domEnv = typeof window != 'undefined';
 

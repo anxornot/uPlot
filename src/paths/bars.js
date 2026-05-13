@@ -1,5 +1,5 @@
-import { abs, floor, min, max, inf, ifNull, EMPTY_OBJ, fnOrSelf, clamp, retArg0, EMPTY_ARR } from '../utils';
-import { orient, rectV, rectH } from './utils';
+import { abs, floor, min, max, inf, ifNull, EMPTY_OBJ, fnOrSelf, clamp, retArg0, EMPTY_ARR } from '../utils.js';
+import { orient, rectV, rectH } from './utils.js';
 
 function findColWidth(dataX, dataY, valToPosX, scaleX, xDim, xOff, colWid = inf) {
 	if (dataX.length > 1) {

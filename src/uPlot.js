@@ -12,7 +12,7 @@ import {
 	FEAT_PATHS_BARS,
 
 	FEAT_JOIN,
-} from './feats';
+} from './feats.js';
 
 import {
 	copy,
@@ -65,6 +65,7 @@ import {
 	cmpObj,
 	isFn,
 	rand,
+} from './utils.js';
 
 import {
 	WIDTH,
@@ -86,7 +87,7 @@ import {
 
 	dppxchange,
 	LEGEND_DISP
-} from './strings';
+} from './strings.js';
 
 import {
 	UPLOT,
@@ -109,7 +110,7 @@ import {
 	LEGEND_MARKER,
 	LEGEND_LABEL,
 	LEGEND_VALUE,
-} from './domClasses';
+} from './domClasses.js';
 
 import {
 	domEnv,
@@ -127,12 +128,12 @@ import {
 	elSize,
 	on,
 	off,
-} from './dom';
+} from './dom.js';
 
 import {
 	fmtDate,
 	tzDate,
-} from './fmtDate';
+} from './fmtDate.js';
 
 import {
 	ptDia,
@@ -183,18 +184,18 @@ import {
 	_timeSeriesStamp,
 
 	legendOpts,
-} from './opts';
+} from './opts.js';
 
-import { _sync } from './sync';
+import { _sync } from './sync.js';
 
-import { points   } from './paths/points';
-import { linear   } from './paths/linear';
-import { stepped  } from './paths/stepped';
-import { bars     } from './paths/bars';
-import { monotoneCubic     as spline  } from './paths/monotoneCubic';
-import { catmullRomCentrip as spline2 } from './paths/catmullRomCentrip';
+import { points   } from './paths/points.js';
+import { linear   } from './paths/linear.js';
+import { stepped  } from './paths/stepped.js';
+import { bars     } from './paths/bars.js';
+import { monotoneCubic     as spline  } from './paths/monotoneCubic.js';
+import { catmullRomCentrip as spline2 } from './paths/catmullRomCentrip.js';
 
-import { addGap, clipGaps, moveToH, moveToV, arcH, arcV, orient, pxRoundGen, seriesFillTo, BAND_CLIP_FILL, BAND_CLIP_STROKE } from './paths/utils';
+import { addGap, clipGaps, moveToH, moveToV, arcH, arcV, orient, pxRoundGen, seriesFillTo, BAND_CLIP_FILL, BAND_CLIP_STROKE } from './paths/utils.js';
 
 function log(name, args) {
 	console.log.apply(console, [name].concat(Array.prototype.slice.call(args)));

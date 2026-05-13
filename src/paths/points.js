@@ -1,5 +1,5 @@
-import { orient, moveToH, moveToV, rectH, arcH, arcV, BAND_CLIP_FILL, BAND_CLIP_STROKE } from './utils';
-import { roundDec, PI } from '../utils';
+import { orient, moveToH, moveToV, rectH, arcH, arcV, BAND_CLIP_FILL, BAND_CLIP_STROKE } from './utils.js';
+import { roundDec, PI } from '../utils.js';
 
 // TODO: drawWrap(seriesIdx, drawPoints) (save, restore, translate, clip)
 export function points(opts) {
