@@ -287,6 +287,7 @@ export const fmtNum = val => numFormatter.format(val);
 
 const M = Math;
 
+export const rand = M.random;
 export const PI = M.PI;
 export const abs = M.abs;
 export const floor = M.floor;

@@ -64,7 +64,7 @@ import {
 	guessDec,
 	cmpObj,
 	isFn,
-} from './utils';
+	rand,
 
 import {
 	WIDTH,
@@ -297,6 +297,7 @@ export default function uPlot(opts, data, then) {
 		_setSize(self.width, self.height, true);
 	}
 	const self = {
+		uid: rand().toString(36).slice(-6),
 		mode: ifNull(opts.mode, 1),
 		pxRatio,
 		setPxRatio,

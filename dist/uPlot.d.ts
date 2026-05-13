@@ -6,6 +6,9 @@ declare class uPlot {
 		targ?: HTMLElement | ((self: uPlot, init: Function) => void)
 	);
 
+	/** unique instance id */
+	readonly uid: string;
+
 	/** chart container */
 	readonly root: HTMLElement;
 
