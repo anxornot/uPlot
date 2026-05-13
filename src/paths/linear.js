@@ -22,6 +22,9 @@ export function linear(opts) {
 		return orient(u, seriesIdx, (series, dataX, dataY, scaleX, scaleY, valToPosX, valToPosY, xOff, yOff, xDim, yDim) => {
 			[idx0, idx1] = nonNullIdxs(dataY, idx0, idx1);
 
+			if (idx0 == -1)
+				return null;
+
 			let pxRound = series.pxRound;
 
 			let alignGaps = opts?.alignGaps ?? series.alignGaps ?? 0;
