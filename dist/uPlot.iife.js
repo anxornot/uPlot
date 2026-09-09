@@ -301,6 +301,7 @@ var uPlot = (function () {
 
 	const M = Math;
 
+	const rand = M.random;
 	const PI = M.PI;
 	const abs = M.abs;
 	const floor = M.floor;
@@ -2452,6 +2453,9 @@ var uPlot = (function () {
 			return orient(u, seriesIdx, (series, dataX, dataY, scaleX, scaleY, valToPosX, valToPosY, xOff, yOff, xDim, yDim) => {
 				[idx0, idx1] = nonNullIdxs(dataY, idx0, idx1);
 
+				if (idx0 == -1)
+					return null;
+
 				let pxRound = series.pxRound;
 
 				let alignGaps = opts?.alignGaps ?? series.alignGaps ?? 0;
@@ -2611,6 +2615,9 @@ var uPlot = (function () {
 
 			return orient(u, seriesIdx, (series, dataX, dataY, scaleX, scaleY, valToPosX, valToPosY, xOff, yOff, xDim, yDim) => {
 				[idx0, idx1] = nonNullIdxs(dataY, idx0, idx1);
+
+				if (idx0 == -1)
+					return null;
 
 				let pxRound = series.pxRound;
 
@@ -2976,6 +2983,9 @@ var uPlot = (function () {
 			return orient(u, seriesIdx, (series, dataX, dataY, scaleX, scaleY, valToPosX, valToPosY, xOff, yOff, xDim, yDim) => {
 				[idx0, idx1] = nonNullIdxs(dataY, idx0, idx1);
 
+				if (idx0 == -1)
+					return null;
+
 				let pxRound = series.pxRound;
 
 				let alignGaps = opts?.alignGaps ?? series.alignGaps ?? 0;
@@ -3236,6 +3246,7 @@ var uPlot = (function () {
 			_setSize(self.width, self.height, true);
 		}
 		const self = {
+			uid: rand().toString(36).slice(-6),
 			mode: ifNull(opts.mode, 1),
 			pxRatio: pxRatio$1,
 			setPxRatio,
